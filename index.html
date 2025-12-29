@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maheshwari VoltX Energy</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:#070b1a;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:linear-gradient(135deg,#030615,#0a1a3a);
+  padding:25px 40px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+header img{
+  height:120px;
+}
+header .brand{
+  font-size:26px;
+  font-weight:600;
+  letter-spacing:1.2px;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 20px;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding-top:120px;
+  padding-bottom:140px;
+  background:
+    radial-gradient(circle at top,#0d2b66,transparent 60%),
+    linear-gradient(180deg,#050814,#070b1a);
+}
+.hero h1{font-size:52px;}
+.hero p{
+  font-size:19px;
+  opacity:0.85;
+  max-width:720px;
+  margin:auto;
+}
+.hero img{
+  margin-top:40px;
+  width:400px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+.btn{
+  padding:14px 30px;
+  background:linear-gradient(135deg,#00ffd5,#00bfa6);
+  color:#000;
+  border-radius:35px;
+  text-decoration:none;
+  font-weight:600;
+  margin:8px;
+  border:none;
+  cursor:pointer;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+}
+.card{
+  background:linear-gradient(180deg,#121a35,#0b1024);
+  border-radius:26px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,0.45);
+  transition:0.4s;
+}
+.card:hover{transform:translateY(-10px);}
+.card img{width:100%;border-radius:18px;}
+.price{color:#00ffd5;font-weight:bold;}
+
+/* OWNER */
+.owner{
+  display:flex;
+  flex-wrap:wrap;
+  gap:45px;
+  align-items:center;
+}
+.owner img{
+  width:260px;
+  border-radius:28px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* DEALER */
+.dealer{
+  background:linear-gradient(135deg,#0b1c3a,#071022);
+  border-radius:30px;
+  padding:50px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* WARRANTY */
+.warranty{
+  background:#0b1024;
+  border-radius:30px;
+  padding:45px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* RATE LIST TABLE */
+.rate-list table{
+  margin:auto;
+  width:90%;
+  border-collapse:collapse;
+  color:#fff;
+}
+.rate-list th, .rate-list td{
+  padding:12px;
+  border-bottom:1px solid #00ffd5;
+  text-align:center;
+}
+.rate-list th{
+  background:#0b1c3a;
+  font-size:18px;
+}
+.rate-list td{
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(135deg,#030615,#01030b);
+  padding:45px 20px;
+  text-align:center;
+}
+footer a{margin:8px;display:inline-block;color:#000;}
+
+/* CART */
+.cart-float{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  background:#00ffd5;
+  color:#000;
+  padding:16px 26px;
+  border-radius:45px;
+  font-weight:bold;
+  box-shadow:0 15px 30px rgba(0,0,0,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Maheshwari VoltX Energy">
+  <div class="brand">Maheshwari VoltX Energy</div>
+</header>
+
+<section class="hero">
+  <h1>Luxury Power for Electric Vehicles ⚡</h1>
+  <p>Premium lithium battery solutions built for performance, trust and India’s EV future.</p>
+  <img src="hero-battery.jpg" alt="EV Battery">
+</section>
+
+<!-- PRODUCTS -->
+<section>
+<h2>🔋 Our EV Battery Range</h2>
+<div class="products">
+
+<div class="card">
+  <img src="battery1.jpg">
+  <h3>Two Wheeler EV Battery</h3>
+  <p>48V / 40ah • Fast Charging</p>
+  <div class="price">₹ 28,000</div>
+  <div class="rating-review">
+  <div class="stars">★★★★★</div>
+  <div class="review-text">4.8 Rating | 214 Reviews</div>
+</div>
+
+  <button class="btn" onclick="addToCart('Two Wheeler EV Battery')">Add to Cart</button>
+  <a class="btn" href="https://wa.me/918586867852?text=I want to buy Two Wheeler EV Battery">Buy Now</a>
+</div>
+
+<div class="card">
+  <img src="battery2.jpg">
+  <h3>E-Rickshaw Battery</h3>
+  <p>48V / 80Ah • Long Range</p>
+  <div class="price">₹ 51,550</div>
+  <div class="rating-review">
+  <div class="stars">★★★★☆</div>
+  <div class="review-text">4.6 Rating | 167 Reviews</div>
+</div>
+
+  <button class="btn" onclick="addToCart('E-Rickshaw Battery')">Add to Cart</button>
+  <a class="btn" href="https://wa.me/918586867852?text=I want to buy E-Rickshaw Battery">Buy Now</a>
+</div>
+
+<div class="card">
+  <img src="battery3.jpg">
+  <h3>Commercial EV Battery</h3>
+  <p>Heavy Duty • High Capacity</p>
+  <div class="price">₹ On Call</div>
+  <div class="rating-review">
+  <div class="stars">★★★★★</div>
+  <div class="review-text">4.9 Rating | 98 Reviews</div>
+</div>
+
+  <button class="btn" onclick="addToCart('Commercial EV Battery')">Add to Cart</button>
+  <a class="btn" href="https://wa.me/918586867852?text=I want to buy Commercial EV Battery">Buy Now</a>
+</div>
+
+</div>
+</section>
+
+<!-- UPDATED RATE LIST WITH BUY NOW -->
+<section class="rate-list">
+  <h2>💰 Battery Price List</h2>
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Model / Specification</th>
+      <th>Price (₹)</th>
+      <th>Buy</th>
+    </tr>
+
+    <!-- EV Scooty / Bike -->
+   <tr><td>EV Scooty / Bike</td><td>48V 20Ah Lithium Battery</td><td>14,600</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 20Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 25Ah Lithium Battery</td><td>20,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 25Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 30Ah Lithium Battery</td><td>22,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 30Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 40Ah Lithium Battery</td><td>25,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 40Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 50Ah Lithium Battery</td><td>28,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 50Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 30Ah Lithium Battery</td><td>30,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 30Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 40Ah Lithium Battery</td><td>33,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 40Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 50Ah Lithium Battery</td><td>36,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 50Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>72V 40Ah Lithium Battery</td><td>40,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 72V 40Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>72V 50Ah Lithium Battery</td><td>45,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 72V 50Ah Lithium Battery">Buy Now</a></td></tr>
+
+    
+    <!-- E-Rickshaw -->
+    <tr><td>E-Rickshaw Battery</td><td>48V 80Ah Lithium Battery</td><td>42,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 80Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 90Ah Lithium Battery</td><td>45,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 90Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 100Ah Lithium Battery</td><td>48,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 100Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 120Ah Lithium Battery</td><td>52,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 120Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>48V 150Ah Lithium Battery</td><td>60,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 48V 150Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 80Ah Lithium Battery</td><td>50,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 80Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 100Ah Lithium Battery</td><td>55,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 100Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>60V 120Ah Lithium Battery</td><td>62,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 60V 120Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>72V 120Ah Lithium Battery</td><td>72,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 72V 120Ah Lithium Battery">Buy Now</a></td></tr>
+<tr><td></td><td>72V 150Ah Lithium Battery</td><td>85,000</td><td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 72V 150Ah Lithium Battery">Buy Now</a></td></tr>
+
+    <!-- EV Car -->
+     
+   
+    <!-- EV Bus / Commercial -->
+    <tr>
+      <td>EV Bus / Commercial</td>
+      <td>100kWh Lithium Pack</td>
+      <td>8,50,000</td>
+      <td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 100kWh Lithium Pack – ₹8,50,000">Buy Now</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>150kWh Heavy Duty Pack</td>
+      <td>12,00,000</td>
+      <td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 150kWh Heavy Duty Pack – ₹12,00,000">Buy Now</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>200kWh Ultra Pack</td>
+      <td>16,50,000</td>
+      <td><a class="btn" href="https://wa.me/918586867852?text=I want to buy 200kWh Ultra Pack – ₹16,50,000">Buy Now</a></td>
+    </tr>
+  </table>
+</section>
+
+<!-- DEALER -->
+<section>
+  <div class="dealer">
+    <h2>🤝 Become a Dealer</h2>
+    <p>
+      Join Maheshwari VoltX Energy as an authorized dealer and grow with India’s EV market.
+      We offer competitive margins, reliable supply and strong brand support.
+    </p>
+    <a class="btn" href="https://wa.me/918586867852?text=I am interested in becoming a dealer">Apply for Dealership</a>
+  </div>
+</section>
+
+<!-- WARRANTY -->
+<section>
+  <div class="warranty">
+    <h2>🛡 Warranty Policy</h2>
+    <p>
+      ✔ Lithium batteries come with <strong>24 to 36 months warranty</strong> depending on model.<br><br>
+      ✔ Manufacturing defects covered under normal usage.<br><br>
+      ✔ Physical / water damage not covered.<br><br>
+      ✔ Warranty valid with invoice.
+    </p>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section>
+<h2>👤 Founder</h2>
+<div class="owner">
+  <img src="owner.jpg"> <img src="" alt="">
+ 
+ <p>
+  <strong>Kanhiaya Maheshwari</strong><br><br>
+  Founder & Visionary behind <strong>Maheshwari VoltX Energy</strong>.  
+  kanhiaya is a young entrepreneur with a strong passion for electric vehicles, lithium battery technology, and future-focused energy solutions.
+  <br><br>
+  Currently, he is building a trusted EV battery brand by sourcing high-quality lithium batteries from reliable manufacturers and delivering them under the Maheshwari VoltX Energy brand.
+  His long-term vision is to establish his own lithium battery manufacturing unit and create employment opportunities while contributing to India’s clean energy and EV revolution.
+  <br><br>
+  His interests include EV technology, battery innovation, sustainable energy, business growth, branding, and building scalable startups.
+  With a clear roadmap and strong determination, he aims to make Maheshwari VoltX Energy a premium and reliable name in the Indian EV market.
+</p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="tel:8586867852" class="btn">📞 Call Now</a>
+  <a href="https://wa.me/918586867852" class="btn">💬 WhatsApp</a>
+  <a href="mailto:vivekmaheshwari5499@gmail.com" class="btn">📧 Email</a>
+  <a href="#maheshwari.voltx" class="btn">📸 Instagram </a>
+  <br><br>
+  © 2025 Maheshwari VoltX Energy  
+  <br>Manufacturing Unit Coming Soon – 2026
+</footer>
+
+<div class="cart-float">
+  🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<script>
+let cart=[];
+function addToCart(item){
+  cart.push(item);
+  document.getElementById("cartCount").innerText=cart.length;
+  alert(item+" added to cart");
+}
+</script>
+
+</body>
+</html> 

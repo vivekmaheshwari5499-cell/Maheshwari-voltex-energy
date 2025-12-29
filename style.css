@@ -1,0 +1,200 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  color: #00c6ff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.product-card {
+  background: linear-gradient(145deg, #0f1a35, #0a1228);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 198, 255, 0.25);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #cfd8ff;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PRICE
+========================= */
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00ffcc;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   RATING & REVIEWS
+========================= */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  color: gold;
+  margin-bottom: 14px;
+}
+
+.rating span {
+  font-size: 13px;
+  color: #b0b8ff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+/* =========================
+   TABLE (RATE LIST)
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  background: #0f1a35;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background: #0072ff;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background: #0b1430;
+}
+
+tr:hover {
+  background: #132255;
+}
+
+/* =========================
+   REVIEW BADGE (OPTIONAL)
+========================= */
+.review-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: rgba(255, 215, 0, 0.15);
+  color: gold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  text-align: center;
+  background: #060b18;
+  color: #b0b8ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+}
